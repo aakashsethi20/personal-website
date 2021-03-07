@@ -16,7 +16,11 @@ export class NavMenuComponent {
     this.isExpanded = !this.isExpanded;
   }
 
-  unfocusAnchor(event) {
+  unfocusLogo(event) {
     console.log(event);
+    event.srcElement.blur();
+    if (event.srcElement.parentNode.id === "headerLogo") {
+      event.srcElement.parentNode.blur();
+    }
   }
 }
